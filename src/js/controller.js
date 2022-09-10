@@ -99,12 +99,15 @@ const controlRecipeUpload = async function (newRecipe) {
     // 7) close form window
     setTimeout(function () {
       addRacipeView.toggleWindow();
-    } , 2500);
+    }, 2500);
   } catch (err) {
     addRacipeView.renderError(err.message);
   }
 };
 
+const newFeature = function () {
+  console.log('Welcome to the application');
+};
 const init = function () {
   bookmarksView.addHandlerRender(initRenderBookmarks);
   recipeView.addHandlerRender(controlRecipes);
@@ -113,6 +116,5 @@ const init = function () {
   searchView.addHandlerSearch(controlSearchResults);
   paginationView.addHandlerClick(controlPagination);
   addRacipeView.addRecipeUpload(controlRecipeUpload);
-  console.log('Master branch');
 };
 init();
