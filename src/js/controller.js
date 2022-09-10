@@ -6,7 +6,7 @@ import paginationView from './views/paginationView.js';
 import bookmarksView from './views/bookmarksView.js';
 import addRacipeView from './views/addRacipeView.js';
 
-import 'core.js';
+// import 'core.js';
 import 'regenerator-runtime/runtime';
 
 // https://forkify-api.herokuapp.com/v2
