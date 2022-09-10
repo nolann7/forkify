@@ -11,9 +11,9 @@ import 'regenerator-runtime/runtime';
 
 // https://forkify-api.herokuapp.com/v2
 // this is parcel not js (apply only in development)
-if (module.hot) {
-  module.hot.accept();
-}
+// if (module.hot) {
+//   module.hot.accept();
+// }
 
 const controlRecipes = async function () {
   try {
