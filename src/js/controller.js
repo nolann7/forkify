@@ -107,7 +107,6 @@ const controlRecipeUpload = async function (newRecipe) {
 
 const newFeature = function () {
   console.log('Welcome to the application');
-  console.log('new line');
 };
 const init = function () {
   bookmarksView.addHandlerRender(initRenderBookmarks);
