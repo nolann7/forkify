@@ -117,5 +117,6 @@ const init = function () {
   paginationView.addHandlerClick(controlPagination);
   addRacipeView.addRecipeUpload(controlRecipeUpload);
   newFeature();
+  
 };
 init();
