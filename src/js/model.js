@@ -95,10 +95,10 @@ export const deleteBookmark = function (id) {
 };
 
 const init = function () {
-  const storage = localStorage.getItem('bookmarks');
+  let storage = localStorage.getItem('bookmarks');
   if (storage) state.bookmarks = JSON.parse(storage);
 };
-// init();
+init();
 
 // function only for development
 const clearBookmarks = function () {
