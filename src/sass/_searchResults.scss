@@ -10,6 +10,7 @@
 }
 
 .pagination {
+  display: flex;
   margin-top: auto;
   padding: 0 3.5rem;
 
@@ -29,15 +30,16 @@
   }
 }
 .pages__amount {
-  float: left;
-  margin-top: 1.1rem;
-  padding-left: 4.8rem;
+  margin: auto auto;
+  padding-top: 0.4rem;
+  display: inline-block;
+  align-self: flex-end;
   color: $color-grey-dark-2;
   font-size: 0.8rem;
   font-weight: bold;
 
   &--first {
-    padding-left: 14.45rem;
+    padding-left: 9.6rem;
   }
 }
 
