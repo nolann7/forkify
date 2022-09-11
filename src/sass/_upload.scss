@@ -44,7 +44,7 @@
 
 .upload {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1.3fr 2fr;
   gap: 4rem 6rem;
 
   &__column {
@@ -61,13 +61,15 @@
 
     & input {
       font-size: 1.5rem;
-      padding: 0.8rem 1rem;
+      padding: 0.4rem 0.4rem;
       border: 1px solid #ddd;
       border-radius: 0.5rem;
       transition: all 0.2s;
 
       &::placeholder {
         color: $color-grey-light-3;
+        font-size: 1.3rem;
+
       }
 
       &:focus {
@@ -82,6 +84,12 @@
       justify-self: center;
       margin-top: 1rem;
     }
+  }
+
+  &__column--ing {
+    grid-template-columns: 1fr 1.5fr 9rem 9rem;
+    align-items: center;
+    gap: 1rem;
   }
 
   &__heading {
