@@ -69,7 +69,6 @@
       &::placeholder {
         color: $color-grey-light-3;
         font-size: 1.3rem;
-
       }
 
       &:focus {
@@ -104,4 +103,16 @@
     grid-column: 1 / -1;
     justify-self: center;
   }
+}
+
+.upload__heading--ing {
+  display: flex;
+  gap: 2rem;
+}
+.add-ing {
+  display: inline-block;
+  cursor: pointer;
+  padding: 0 1.45rem;
+  border-radius: 200px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }

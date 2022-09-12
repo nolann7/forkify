@@ -1,20 +1,24 @@
 import icons from '../../img/icons.svg';
 import View from './View.js';
+import {DEFAULT_AMOUNT_ING} from '../config.js'
 
 class AddRecipeView extends View {
+  counter = DEFAULT_AMOUNT_ING + 1;
   _parentElement = document.querySelector('.upload');
   _message = 'Recipe was successfully uploaded :)';
   _errorMessage = 'Something went wrong :( Please try again!';
-
   _window = document.querySelector('.add-recipe-window');
   _overlay = document.querySelector('.overlay');
   _btnOpen = document.querySelector('.nav__btn--add-recipe');
   _btnClose = document.querySelector('.btn--close-modal');
+  _plusIng = document.querySelector('.add-ing');
+  _ingColumn = document.querySelector('.upload__column--ing')
 
   constructor() {
     super();
     this._addHandlerShowWindow();
     this._addHandlerHideWindow();
+    this._addIngredientRaw();
   }
 
   toggleWindow() {
@@ -42,7 +46,37 @@ class AddRecipeView extends View {
       handler(data);
     });
   }
-
-  _generateMarkup() {}
+ 
+  _renderMarkupIng(){
+   const markup = `
+    <label>Ingredient ${this.counter}:</label>
+    <input
+      value="Rice"
+      type="text"
+      required
+      name="ingredient-${this.counter}-description"
+      placeholder="Food description (e.g. rice)"
+    />
+    <input
+      value="0.5"
+      type="text"
+      name="ingredient-${this.counter}-quantity"
+      placeholder="quantity"
+    />
+    <input
+      value="kg"
+      type="text"
+      name="ingredient-${this.counter++}-unit"
+      placeholder="unit (e.g. kg)"
+    />
+   `
+   this._ingColumn.insertAdjacentHTML('beforeend', markup);
+  }
+  _addIngredientRaw() {
+    this._plusIng.addEventListener('click', this._renderMarkupIng.bind(this));
+  }
+ 
+  _generateMarkup() {
+  }
 }
 export default new AddRecipeView();
