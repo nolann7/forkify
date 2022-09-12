@@ -27,6 +27,13 @@ class RecipeView extends View {
       handler();
     });
   }
+  addHandlerAddToList(handler) {
+    this._parentElement.addEventListener('click', (e) => {
+      const btn = e.target.closest('.btn--add-list');
+      if (!btn) return;
+      handler();
+    });
+  }
 
   _generateMarkup() {
     return `
@@ -76,11 +83,18 @@ class RecipeView extends View {
             </div>
           </div>
 
+          <button class="btn--round btn--add-list">
+            <svg class="">
+              <use href="${icons}#icon-plus-circle"></use>
+            </svg>
+          </button>
+
           <div class="recipe__user-generated ${this._data.key ? '' : 'hidden'}">
             <svg>
               <use href="${icons}#icon-user"></use>
             </svg>
           </div>
+
           <button class="btn--round btn--bookmark">
             <svg class="">
               <use href="${icons}#icon-bookmark${

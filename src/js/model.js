@@ -10,6 +10,7 @@ export const state = {
     currentPage: 1,
   },
   bookmarks: [],
+  list: [],
 };
 const createRecipeObject = function (data) {
   const { recipe } = data.data;
@@ -75,10 +76,12 @@ export const updateServings = function (newServings) {
   state.recipe.servings = newServings;
 };
 
+export const addToList = function(ingredients){
+  state.list.push(ingredients);
+}
 const persistBookmark = function () {
   localStorage.setItem('bookmarks', JSON.stringify(state.bookmarks));
 };
-
 export const addBookmark = function (recipe) {
   // Adding recipe to bookmarkes
   state.bookmarks.push(recipe);

@@ -59,7 +59,8 @@ class AddRecipeView extends View {
     />
     <input
       value="0.5"
-      type="text"
+      type="number" 
+      step="0.01"
       name="ingredient-${this.counter}-quantity"
       placeholder="quantity"
     />

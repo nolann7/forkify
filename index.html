@@ -45,6 +45,14 @@
               </button>
             </li>
             <li class="nav__item">
+              <button class="nav__btn ">
+                <svg class="nav__icon">
+                  <use href="src/img/icons.svg#icon-edit"></use>
+                </svg>
+                <span>List</span>
+              </button>
+            </li>
+            <li class="nav__item">
               <button class="nav__btn nav__btn--bookmarks">
                 <svg class="nav__icon">
                   <use href="src/img/icons.svg#icon-bookmark"></use>
@@ -256,6 +264,8 @@
       </div>
     </div>
 
+<!-- TODO     создать всплывающее окно для показа листа (такое же как и для добавления рецепта) -->
+
     <div class="overlay hidden"></div>
     <div class="add-recipe-window hidden">
       <button class="btn--close-modal">&times;</button>
@@ -293,7 +303,9 @@
           />
           <input
             value="0.5"
-            type="text"
+            type="number"
+            step="0.01"
+            min="0.01"
             name="ingredient-1-quantity"
             placeholder="quantity"
           />
@@ -314,7 +326,9 @@
           <input
             class="ing2"
             value="1"
-            type="text"
+            type="number"
+            step="0.01"
+            min="0.01"
             name="ingredient-2-quantity"
             placeholder="quantity"
           />
@@ -334,7 +348,9 @@
           />
           <input
             value=""
-            type="text"
+            type="number"
+            step="0.01"
+            min="0.01"
             name="ingredient-3-quantity"
             placeholder="quantity"
           />
@@ -353,7 +369,9 @@
           />
           <input
             value=""
-            type="text"
+            type="number"
+            step="0.01"
+            min="0.01"
             name="ingredient-4-quantity"
             placeholder="quantity"
           />
@@ -372,7 +390,9 @@
           />
           <input
             value=""
-            type="text"
+            type="number"
+            step="0.01"
+            min="0.01"
             name="ingredient-5-quantity"
             placeholder="quantity"
           />
@@ -391,7 +411,9 @@
           />
           <input
             value=""
-            type="text"
+            type="number"
+            step="0.01"
+            min="0.01"
             name="ingredient-6-quantity"
             placeholder="quantity"
           />
